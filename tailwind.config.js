@@ -8,6 +8,8 @@ module.exports = {
 
     extend: {
       colors: {
+        transparent: 'transparent',
+        
         blackAkira: '#222',
         
         rojoAkira: {

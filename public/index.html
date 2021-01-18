@@ -3,24 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nos dedicamos al envío de comida">
+	<meta name="keywords" content="Desayunos, Comidas, Cenas, Postres">
+    <meta name="robots" content="index,follow">
+    
     <title>Akira Food</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/113a378e2b.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
     <link rel="stylesheet" href="css/tailwind.css">    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1 class="text-magenta font-rale font-black">Lorem, ipsum dolor.</h1>
-    <h2 class="bg-magenta">Lorem ipsum dolor sit amet.</h2>
-    <h3 class="text-azul-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, quod.</h3>
-    <h4 class="text-azul-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, placeat.</h4>
+    
+    <!-- NAVBAR -->
+    <nav class="navAkiraFood bg-transparent">
+        <div class="flex items-center ǀ container lg:max-w-7xl ǀ mx-auto">
+            <div class="md:hidden">
+                <button id="dropMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="content-logo-nav">
+                <img src="img/logoNavAF.svg">
+            </div>
+            <div class="link-menu ǀ hidden md:block">
+                <ul class="flex ǀ list-none">
+                    <li class="font-semibold ǀ mr-8">
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="font-semibold">
+                        <a href="#">Menú</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="user ǀ flex ǀ ml-auto">
+                <div class="relative">
+                    <p id="opUser" class="dropUser ǀ flex items-center ǀ cursor-pointer">
+                        <img src="img/icon-user.svg" class="mr-2">
+                        <span class="hidden ǀ md:block ǀ font-semibold ǀ mr-2">Usuario</span>
+                        <i class="fas fa-chevron-down hidden md:block"></i>
+                    </p>
+                    <div id="dropUser" class="dropDown ǀ hidden">
+                        <ul class="list-none">
+                            <li><a href="#">Direcciones</a></li>
+                            <li><a href="#">Formas de pago</a></li>
+                            <li><a href="#">Pedidos</a></li>
+                            <li><a href="#">Cambiar contraseña</a></li>
+                            <li class="last-op"><a href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- Using utilities -->
-    <button class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700">
-        Click me
-    </button>
+                <div class="relative ǀ hidden ǀ md:block ǀ ml-5">
+                    <img src="img/icon-cesta.svg">
+                    <div class="cirlce-bg-item"><span>10</span></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="dropMobile" class="hidden">
+        <ul class="list-none">
+            <li>Inicio</li>
+            <li>Menú</li>
+        </ul>
+    </div>
+    <!-- END NAVBAR -->
+
+
+    
+
+
+    <button class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">Open Modal</button>
   
-    <!-- Extracting classes using @apply -->
-    <button class="btn btn-green">
-        Button
-    </button>
+    <!--Modal-->
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        
+        <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        
+        <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+            <span class="text-sm">(Esc)</span>
+        </div>
 
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="modal-content py-4 text-left px-6">
+            <!--Title-->
+            <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Simple Modal!</p>
+            <div class="modal-close cursor-pointer z-50">
+                <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                </svg>
+            </div>
+            </div>
+
+            <!--Body-->
+            <p>Modal content can go here</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+
+            <!--Footer-->
+            <div class="flex justify-end pt-2">
+            <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>
+            <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="js/app.js"></script>
 </body>
 </html>

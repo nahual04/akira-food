@@ -1,0 +1,94 @@
+/*GENERAL*/
+html, body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #222;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body{
+	background: #fff;
+    margin-bottom: 119px;
+    padding-bottom: 80px;
+}
+
+*, button{
+	outline: none!important;
+}
+
+/*GENERAL*/
+
+/*NAVBAR*/
+
+.navAkiraFood {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.content-logo-nav {
+    position: relative;
+    margin-right: 20%;;
+}
+
+.content-logo-nav::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #222;
+    position: absolute;
+    left: 130%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cirlce-bg-item {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 10px;
+    font-weight: 600;
+    background: #81B057;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.dropDown {
+    position: absolute;
+    top: 46px;
+    border-radius: 10px;
+    background: #E7EBF2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    width: max-content;
+    transition ease-out duration-100
+}
+
+.last-op {
+    border-top: 1px solid #DAD8DB;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+/*END NAVBAR*/
+
+/*MODAL*/
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
+/*END MODAL*/
