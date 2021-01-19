@@ -18,8 +18,6 @@ dropDownUser.addEventListener('click', () => {
 })
 // END DROPDOWN USER OPTIONS
 
-
-
 //MODAL
 var openmodal = document.querySelectorAll('.modal-open')
 for (var i = 0; i < openmodal.length; i++) {
@@ -60,6 +58,59 @@ function toggleModal () {
 }
 //END MODAL
 
+// HIDE NAVBAR ON SCROLL DOWN
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('nav').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('nav').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('nav').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+//END HIDE NAVBAR ON SCROLL DOWN
+
+// CHANGE BACKGROUND NAVBAR ON TOP
+$(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if(scroll < 200){
+      $('.fixed-top').css('background', 'transparent');
+      $('.fixed-top').css('box-shadow', 'none');
+  } else{
+      $('.fixed-top').css('background', 'rgba( 255, 255, 255, 1)');
+      $('.fixed-top').css('box-shadow', '0px 4px 16px rgba(0, 0, 0, 0.25)');
+  }          
+});         
+// END CHANGE BACKGROUND NAVBAR ON TOP
+
 //SIDEBAR
 $(document).ready(function() {
 
@@ -81,3 +132,24 @@ $(document).ready(function() {
 
 });
 //SIDEBAR
+
+//SWIPER
+var swiper = new Swiper('.swiper-container', {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: 3.5,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+//SWIPER
+
+
+
+

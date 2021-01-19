@@ -30,6 +30,10 @@
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/113a378e2b.js" crossorigin="anonymous"></script>
+    <!-- animxyz -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core@0.4.0/dist/animxyz.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper.min.css">
 
     <!-- css -->
     <link rel="stylesheet" href="css/tailwind.css">    
@@ -38,7 +42,7 @@
 <body>
     <main>
         <!-- NAVBAR -->
-        <nav class="navAkiraFood ǀ bg-transparent ǀ fixed z-30 w-full">
+        <nav class="navAkiraFood navbar fixed-top ǀ bg-transparent ǀ fixed z-30 w-full ǀ nav-down">
             <div class="flex justify-between items-center ǀ container ǀ lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0">
                 <div class="md:hidden">
                     <label class="toggle">
@@ -113,21 +117,76 @@
         </div>
         <!-- END NAVBAR -->
 
-        <section class="bg-grayAkira-100 ǀ relative ǀ pt-24">
+        <!-- REGISTRO -->
+        <section class="bg-grayAkira-100 ǀ relative ǀ py-24">
             <div class="container lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0">
-                <h1 class="md:text-5xl font-bold"><p class="mb-3">NO TE QUEDES</p>CON HAMBRE<p></p></h1>
-                <p class="md:text-3xl">Solo regístrate y pide tu comida.</p>
-                <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Registrarme</a>
-                <p class="md:text-2xl font-bold">Elige un platillo:</p>
+                <h1 class="md:text-5xl font-bold w-max"><p class="mb-3">NO TE QUEDES</p>CON HAMBRE<p></p></h1>
+                <p class="md:text-3xl w-max ǀ mt-5">Solo regístrate y pide tu comida.</p>
+                <a href="#" class="flex items-center justify-center ǀ modal-open ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 w-max ǀ p-4 my-8">Registrarme</a>
+                <p class="md:text-2xl font-bold ǀ w-max ǀ mb-3">Elige un platillo:</p>
+
+                <!-- carousel -->
+                <div id="dish-carousel" class="swiper-container" dir="rtl">
+                    <div class="swiper-wrapper">
+                        <!-- dish 1 -->
+                        <a href="#" class="swiper-slide ǀ rounded-2xl ǀ overflow-hidden ǀ h-48 relative ǀ relative">
+                            <div class="time-dish ǀ flex items-center ǀ bg-white ǀ absolute">
+                                <p>Desayunos de 09:00 a 11:00</p>
+                                <i class="far fa-clock text-redAkira-100 mr-2"></i>
+                            </div>
+                            <img src="img/food/desayuno2.jpg" class="object-cover h-full w-full">
+                        </a>
+                        <!-- end dish 1 -->
+                        <!-- dish 2 -->
+                        <a href="#" class="swiper-slide ǀ rounded-2xl ǀ overflow-hidden ǀ h-48 relative ǀ relative">
+                            <div class="time-dish ǀ flex items-center ǀ bg-white ǀ absolute">
+                                <p>Comidas de 13:00 a 15:00</p>
+                                <i class="far fa-clock text-redAkira-100 mr-2"></i>
+                            </div>
+                            <img src="img/food/spagueti.jpg" class="object-cover h-full w-full">
+                        </a>
+                        <!-- end dish 2 -->
+                        <!-- dish 3 -->
+                        <a href="#" class="swiper-slide ǀ rounded-2xl ǀ overflow-hidden ǀ h-48 relative ǀ relative">
+                            <div class="time-dish ǀ flex items-center ǀ bg-white ǀ absolute">
+                                <p>Cenas de 18:00 a 20:00</p>
+                                <i class="far fa-clock text-redAkira-100 mr-2"></i>
+                            </div>
+                            <img src="img/food/cena.jpg" class="object-cover h-full w-full">
+                        </a>
+                        <!-- end dish 3 -->
+                        <!-- dish 4 -->
+                        <a href="#" class="swiper-slide ǀ rounded-2xl ǀ overflow-hidden ǀ h-48 relative ǀ relative">
+                            <div class="time-dish ǀ flex items-center ǀ bg-white ǀ absolute">
+                                <p>Postres de 09:00 a 20:00</p>
+                                <i class="far fa-clock text-redAkira-100 mr-2"></i>
+                            </div>
+                            <img src="img/food/postre.jpg" class="object-cover h-full w-full">
+                        </a>
+                        <!-- end dish 4 -->
+                    </div>
+                    <!-- Add Pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <!-- Add Arrows -->
+                    <div class="btn-carousel ǀ flex">
+                        <div class="swiper-button-next ǀ w-10 h-10 ǀ rounded-full ǀ cursor-pointer ǀ bg-yellowAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="swiper-button-prev ǀ w-10 h-10 ǀ rounded-full ǀ cursor-pointer ǀ bg-yellowAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-3">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </div>
+                    
+                  </div>
+                <!-- end carousel -->
             </div>
             <div class="absolute top-10 right-0">
                 <img src="img/Banner.png" class="">
             </div>
         </section>
+        <!-- END REGISTRO -->
 
-        <button class="modal-open "> modal </button>
-    
-        <!--Modal-->
+        <!--MODAL REGISTRO-->
         <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
             <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
             
@@ -142,22 +201,181 @@
                     </div>
 
                     <!--Body-->
-                    <p class="text-2xl font-bold">Simple Modal!</p>
-                    <p>Modal content can go here</p>
-                    <p>...</p>
-                    <p>...</p>
-                    <p>...</p>
-                    <p>...</p>
+                    <div class="modal-body px-10">
+                        <div class="flex justify-between">
+                            <div><p class="text-2xl font-bold">Registro</p></div>
+                            <a class="flex items-center ǀ cursor-pointer ǀ text-blueAkira-200">
+                                <p class="block ǀ w-max ǀ hover:underline ǀ mr-3">Ya tengo una cuenta</p>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        
+                        <form action="" class="py-5">
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Nombre completo</label>
+                                <div class="relative ǀ h-12">
+                                    <i class="fas fa-user ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Nombre completo" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                </div>
+                            </div>
 
-                    <!--Footer-->
-                    <div class="flex justify-center ǀ my-5">
-                        <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Registrarme</a>
-                    </div>
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Teléfono</label>
+                                <div class="relative ǀ h-12">
+                                    <i class="fas fa-phone-alt ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Teléfono" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Correo</label>
+                                <div class="relative ǀ h-12">
+                                    <i class="fas fa-envelope ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Correo" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Contraseña</label>
+                                <div class="relative ǀ h-12">
+                                    <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Contraseña" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Confirmar contraseña</label>
+                                <div class="relative ǀ h-12">
+                                    <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Confirmar contraseña" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Código postal</label>
+                                <div class="relative ǀ h-12 ǀ grid grid-cols-10">
+                                    <i class="fas fa-map-marker-alt ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Código postal" class="border border-blackAkira-100 rounded-l-lg ǀ h-full pl-12 ǀ col-span-8">
+                                    <a href="#" class="bg-blackAkira-100 text-white font-bold ǀ h-full rounded-r-lg ǀ col-span-2 ǀ flex items-center justify-center">Validar</a>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="mb-2">Tipo de vivienda</label>
+                                <div class="relative ǀ h-12">
+                                    <i class="fas fa-home ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                    <input type="text" placeholder="Tipo de vivienda" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center ǀ my-5">
+                                <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Registrarme</a>
+                            </div>
+                        </form>
+                    </div>                    
                 </div>
             </div>
         </div>
+        <!-- END MODAL REGISTRO -->
+
+        <!-- ABOUT US -->
+        <section class="relative ǀ bg-white ǀ py-44">
+            <div class="container lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0 ǀ grid grid-cols-12">
+                <div class="cont-img-about">
+                    <img src="img/imgQuienesSomos.png" alt="¿QUIÉNES SOMOS?">
+                </div>
+                <div class="col-start-6 col-span-7">
+                    <h2 class="md:text-5xl font-bold w-max ǀ mb-10"><p class="mb-3">¿QUIÉNES</p><p>SOMOS?</p></h2>
+                    <p class="mb-5">En Akira Bakery nuestra misión es siempre dar al cliente lo que busca, lo que necesita y lo que desea, llevando de la mano la calidad/ precio.</p>
+                    <p class="mb-5">Brindamos servicio a domicilio, para tu mejor comodidad.</p>    
+                    <p class="mb-5">Conócenos en nuestras rededs sociales:</p>
+    
+                    <div class="flex mb-5">
+                        <a href="#" class="h-14 w-14 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-blackAkira-100 text-white text-lg ǀ mr-3">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="h-14 w-14 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-blackAkira-100 text-white text-lg ǀ mr-3">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="h-14 w-14 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-blackAkira-100 text-white text-lg">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <p class="mb-5">Conócenos en nuestras rededs sociales:</p>
+
+                    <div class="flex items-center ǀ mb-5">
+                        <a href="#" class="h-14 w-14 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-blackAkira-100 text-white text-lg ǀ mr-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <p class="font-semibold text-20">55 12 34 56 78</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- END ABOUT US -->
+
+        <!-- AKIRA BAKERY -->
+        <section class="relative ǀ bg-white ǀ py-24">
+            <div class="container lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0 ǀ bg-blueAkira-100 ǀ rounded-2xl ǀ grid grid-cols-12">
+                <div class="col-span-6 ǀ p-20">
+                    <h2 class="md:text-5xl font-bold w-max ǀ mb-10"><p class="mb-3">¿TE GUSTAN</p><p>LOS PASTELES?</p></h2>
+                    <p class="mb-5">Te invitamos a pasar por AKIRA BAKERY donde podrás encontrar una gran variedad de deliciosos pastelillos que te encantarán.</p>
+                    <p class="">Etiam nulla natoque nullam nibh nam sociosqu rutrum ligula morbi est sapien nisi scelerisque mi, gravida ornare potenti turpis integer ante leo commodo accumsan cursus magnis lectus.</p>
+                    <a href="#" class="flex items-center justify-center ǀ modal-open ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 w-max ǀ p-4 my-8">Ir a Akira Bakery</a>
+                </div>    
+                
+                <div class="col-span-6 ǀ card-bakery">
+                    <div class="text-center ǀ relative  bottom-20">
+                        <div class="card-cake">
+                            <img src="img/pastel1.png">
+                        </div>
+                        <div class="card-cake">
+                            <img src="img/pastel2.png">
+                        </div>
+                        <div class="card-cake">
+                            <img src="img/pastel3.png">
+                        </div>
+                        <div class="card-cake">
+                            <img src="img/pastel4.png">
+                        </div>
+                        <div class="card-cake">
+                            <img src="img/pastel5.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END AKIRA BAKERY -->
+
+        <!-- FOOTER -->
+        <footer class="bg-blackAkira-200 ǀ py-10">
+            <div class="container lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0 ǀ grid grid-cols-12">
+                <div class="col-span-4">
+                    <img src="img/logoFooterAF.svg">
+                </div>
+                <div class="col-span-4 ǀ flex items-center">
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg ǀ mr-5">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg ǀ mr-5">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="col-span-4">
+                    <p class="text-white mb-5">Tel: 932 101 8772</p>
+                    <p class="text-white">Akira Food todos los derechos reservados 2021</p>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
     </main>
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="headerModal ǀ relative ǀ bg-gray-100">
             <div class="btn-cesta ǀ absolute ǀ top-5 right-5 ǀ cursor-pointer ǀ z-50">
@@ -165,12 +383,12 @@
             </div>
             <img src="img/imgModal.png" class="relative ǀ mx-auto pt-5">
         </div>
-        <div class="sidebar-content ǀ p-5">
+        <div class="sidebar-content ǀ py-5 px-10">
             <div class="col-span-6 ǀ text-center">
                 <p class="font-bold text-xl">Cesta de compras</p>
             </div>
             <!-- card 1 -->
-            <div class="card-food ǀ grid grid-cols-6 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
+            <div class="card-food reboteIn ǀ grid grid-cols-6 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
                 <div class="rounded-2xl ǀ overflow-hidden ǀ col-span-2">
                     <img src="img/food/spagueti.jpg" alt="spagueti" class="object-cover h-full w-full">
                 </div>
@@ -178,39 +396,39 @@
                     <p>Spaghetti Saute with tomatoes and basil</p>
                     <p class="text-redAkira-100 font-semibold text-xl ǀ py-5">$ 60.00</p>
                     <div class="flex items-center">
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
                             <i class="fas fa-minus"></i>
                         </a>
                         <span>1</span>
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
                             <i class="fas fa-plus"></i>
                         </a>
                     </div>
                     <div class=" ǀ mt-5">
-                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira text-blackAkira ǀ hover:bg-blackAkira hover:text-white">Eliminar</a>
+                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira-100 text-blackAkira-100 ǀ hover:bg-blackAkira-100 hover:text-white">Eliminar</a>
                     </div>
                 </div>
             </div>
             <!-- end card 1 -->
             <!-- card 2 -->
-            <div class="card-food ǀ grid grid-cols-6 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
+            <div class="card-food reboteIn ǀ grid grid-cols-6 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
                 <div class="rounded-2xl ǀ overflow-hidden ǀ col-span-2">
                     <img src="img/food/cafe.jpg" alt="café" class="object-cover h-full w-full">
                 </div>
                 <div class="col-span-4">
-                    <p>Spaghetti Saute with tomatoes and basil</p>
+                    <p>Café</p>
                     <p class="text-redAkira-100 font-semibold text-xl ǀ py-5">$ 15.00</p>
                     <div class="flex items-center">
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
                             <i class="fas fa-minus"></i>
                         </a>
                         <span>1</span>
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
                             <i class="fas fa-plus"></i>
                         </a>
                     </div>
                     <div class=" ǀ mt-5">
-                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira text-blackAkira ǀ hover:bg-blackAkira hover:text-white">Eliminar</a>
+                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira-100 text-blackAkira-100 ǀ hover:bg-blackAkira-100 hover:text-white">Eliminar</a>
                     </div>
                 </div>
             </div>
@@ -220,27 +438,28 @@
                 <p class="font-semibold">Robelci Manuel Guzmán</p>
                 <p>Calle Río Macuspana No. 124, Col. Tabasco, Xalapa, Veracruz</p>
                 <p>CP: 12345</p>
-                <a href="#" class="block ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra dirección</a>
+                <a href="#" class="block ǀ w-max ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra dirección</a>
             </div>
             <div class="py-5">
                 <p class="font-semibold ǀ mb-3">Forma de pago</p>
                 <p class="font-semibold">Robelci Manuel Guzmán</p>
                 <p>xxxx - xxxx - xxxx-1234</p>
                 <p>14-01-21</p>
-                <a href="#" class="block ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra tarjeta</a>
+                <a href="#" class="block ǀ w-max ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra tarjeta</a>
             </div>
         </div>
         <div class="flex justify-center ǀ mb-10">
             <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Hacer pedido</a>
         </div>
     </div>
+    <!-- END SIDEBAR -->
 
 
 
 
 
 
-
+    <script src="js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>

@@ -17,17 +17,27 @@ body{
 }
 
 *, button{
-	outline: none!important;
+    outline: none!important;
+    box-sizing: border-box;
 }
 
 /*GENERAL*/
 
 /*NAVBAR*/
-
 .navAkiraFood {
     height: 60px;
     display: flex;
     align-items: center;
+    transition: top 0.2s ease-in-out;
+    top: 0;
+}
+
+.navbar.nav-down {
+    background: #fff;
+}
+
+.nav-up {
+    top: -60px;
 }
 
 .content-logo-nav {
@@ -71,12 +81,6 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 15px;
     width: max-content;
-    /* -webkit-transition: -webkit-transform .5s cubic-bezier(.165,.84,.44,1);
-    transition: -webkit-transform .5s cubic-bezier(.165,.84,.44,1);
-    -o-transition: transform .5s cubic-bezier(.165,.84,.44,1);
-    transition: transform .5s cubic-bezier(.165,.84,.44,1);
-    transition: transform .5s cubic-bezier(.165,.84,.44,1), -webkit-transform .5s cubic-bezier(.165,.84,.44,1);
-    transition: transform .5s cubic-bezier(.165,.84,.44,1),-webkit-transform .5s cubic-bezier(.165,.84,.44,1); */
 }
 
 .last-op {
@@ -135,22 +139,6 @@ body{
     }
 }
 /*END NAVBAR*/
-
-/*MODAL*/
-.modal {
-    transition: opacity 0.25s ease;
-}
-
-body.modal-active {
-    overflow-x: hidden;
-    overflow-y: visible !important;
-}
-
-.headerModal {
-    background-image: url(../img/bg-food.svg);
-    background-repeat: repeat;
-}
-/*END MODAL*/
 
 /*BTN BURGER*/
 .toggle {
@@ -271,6 +259,52 @@ body.modal-active {
 
 /*END BTN BURGER*/
 
+/*SWIPER*/
+.swiper-container {
+    height: 230px;
+    width: 80%;
+    left: -20%;
+    margin: 0;
+}
+
+#dish-carousel {
+    padding-right: 15px;
+}
+
+#dish-carousel .swiper-slide {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+#dish-carousel .swiper-wrapper {
+    height: 180px;
+}
+
+.time-dish {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-carousel {
+    height: 50px;
+    justify-content: end;
+}
+
+#dish-carousel .swiper-button-next, #dish-carousel .swiper-button-prev{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    right: inherit;
+    left: inherit;
+}
+
+#dish-carousel .swiper-button-next:after, #dish-carousel .swiper-button-prev:after {
+    content: none;
+}
+/*SWIPER*/
+
 /*SIDEBAR*/
 
 body,
@@ -323,5 +357,146 @@ main {
 
 /*------------------------------*/
 
+.move-to-left+.sidebar .card-food.reboteIn {
+	-webkit-animation:1s reboteIn 1;
+}
+
+@-webkit-keyframes reboteIn {
+	0%{
+		opacity: 0;
+		-webkit-transform: scale(0);
+	}
+	50%{
+		opacity: 1;
+		-webkit-transform: scale(1.2);
+	}
+	70%{
+		-webkit-transform: scale(0.9);
+	}
+}
 
 /*END SIDEBAR*/
+
+/*MODAL*/
+.modal {
+    transition: opacity 0.25s ease;
+    z-index: 50;
+}
+
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
+
+.modal-container {
+    max-width: 540px;
+    transform: scale(0);
+    -webkit-transition: transform .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out;
+    -ms-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+.modal-content {
+    width: 540px;
+    height: 100%;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+body.modal-active .modal-container {
+    transform: scale(1);
+}
+
+.headerModal {
+    background-image: url(../img/bg-food.svg);
+    background-repeat: repeat;
+}
+/*END MODAL*/
+
+/*ABOUT*/
+.cont-img-about {
+    position: absolute;
+    left: -10%;
+    top: 10px;
+}
+/*END ABOUT*/
+
+/*AKIRA BAKERY*/
+.card-cake {
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    margin: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: inline-block;
+    position: relative;
+}
+
+.card-bakery .card-cake:nth-child(1) {
+    background: #FC9390;
+    display: block;
+    margin: auto;
+}
+
+.card-bakery .card-cake:nth-child(2) {
+    background: #F9E2DB;
+}
+
+.card-bakery .card-cake:nth-child(3) {
+    background: #89C6C8;
+}
+
+.card-bakery .card-cake:nth-child(4) {
+    background: #B48B83;
+}
+
+.card-bakery .card-cake:nth-child(5) {
+    background: #D75D64;
+    display: block;
+    margin: auto;
+}
+
+.card-cake img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*END AKIRA BAKERY*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

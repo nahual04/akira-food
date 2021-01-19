@@ -10,7 +10,10 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         
-        blackAkira: '#222',
+        blackAkira: {
+          100: '#222',
+          200: '#4D4D4D',
+        },
         
         grayAkira: {
           100: '#F2F2F2',
