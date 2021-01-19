@@ -259,6 +259,12 @@ body{
 
 /*END BTN BURGER*/
 
+/*REGISTRO*/
+#registro {
+    z-index: 1;
+}
+/*END REGISTRO*/
+
 /*SWIPER*/
 .swiper-container {
     height: 230px;
