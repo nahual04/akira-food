@@ -12,7 +12,12 @@ module.exports = {
         
         blackAkira: '#222',
         
-        rojoAkira: {
+        grayAkira: {
+          100: '#F2F2F2',
+          200: '#D9D9D9',
+        },
+
+        redAkira: {
           100: '#E54658',
           200: '#C5221F',
         },
@@ -24,6 +29,7 @@ module.exports = {
 
         blueAkira: {
           100: '#F0F0FA',
+          200: '#1C6F9E',
         },
 
         greenAkira: '#81B057',

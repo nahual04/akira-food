@@ -59,3 +59,25 @@ function toggleModal () {
     body.classList.toggle('modal-active')
 }
 //END MODAL
+
+//SIDEBAR
+$(document).ready(function() {
+
+    function toggleSidebar() {
+      $(".btn-cesta").toggleClass("active");
+      $("main").toggleClass("move-to-left");
+      $(".sidebar-item").toggleClass("active");
+    }
+
+    $(".btn-cesta").on("click tap", function() {
+      toggleSidebar();
+    });
+
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) {
+        toggleSidebar();
+      }
+    });
+
+});
+//SIDEBAR
