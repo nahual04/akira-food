@@ -59,49 +59,44 @@ function toggleModal () {
 //END MODAL
 
 // HIDE NAVBAR ON SCROLL DOWN
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('nav').outerHeight();
+// var didScroll;
+// var lastScrollTop = 0;
+// var delta = 5;
+// var navbarHeight = $('nav').outerHeight();
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+// $(window).scroll(function(event){
+//     didScroll = true;
+// });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+// setInterval(function() {
+//     if (didScroll) {
+//         hasScrolled();
+//         didScroll = false;
+//     }
+// }, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
+// function hasScrolled() {
+//     var st = $(this).scrollTop();
     
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+//     if(Math.abs(lastScrollTop - st) <= delta)
+//         return;
+   
+//     if (st > lastScrollTop && st > navbarHeight){
+//         $('nav').removeClass('nav-down').addClass('nav-up');
+//     } else {
+//         if(st + $(window).height() < $(document).height()) {
+//             $('nav').removeClass('nav-up').addClass('nav-down');
+//         }
+//     }
     
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('nav').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('nav').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-    
-    lastScrollTop = st;
-}
+//     lastScrollTop = st;
+// }
 //END HIDE NAVBAR ON SCROLL DOWN
 
 // CHANGE BACKGROUND NAVBAR ON TOP
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
-  if(scroll < 200){
+  if(scroll < 80){
       $('.fixed-top').css('background', 'transparent');
       $('.fixed-top').css('box-shadow', 'none');
   } else{
@@ -147,6 +142,36 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        0: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+        },
+        480: {
+            slidesPerView: 1.8,
+            spaceBetween: 20,
+        },
+        520: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        630: {
+            slidesPerView: 2.1,
+            spaceBetween: 20,
+          },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 2.1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 2.8,
+          spaceBetween: 25,
+        },
+      }
 });
 //SWIPER
 
