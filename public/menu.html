@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nos dedicamos al envío de comida">
+        <meta name="keywords" content="Desayunos, Comidas, Cenas, Postres">
+        <meta name="robots" content="index,follow">
+        
+        <title>Akira Food ǀ Menú</title>
+    
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/113a378e2b.js" crossorigin="anonymous"></script>
+    
+        <!-- css -->
+        <link rel="stylesheet" href="css/tailwind.css">    
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+
+    <main>
+        <!-- NAVBAR -->
+        <nav class="navAkiraFood navbar fixed-top ǀ bg-transparent ǀ fixed z-30 w-full ǀ nav-down">
+            <div class="flex justify-between items-center ǀ container ǀ lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0">
+                <div class="md:hidden">
+                    <label class="toggle">
+                        <input type="checkbox" id="dropMenu">
+                        <div>
+                            <div>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <svg>
+                                <use xlink:href="#path">
+                            </svg>
+                            <svg>
+                                <use xlink:href="#path">
+                            </svg>
+                        </div>
+                    </label>
+                            
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+                            <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+                        </symbol>
+                    </svg>
+                </div>
+
+
+                <div class="content-logo-nav ǀ md:mr-44 lg:mr-64">
+                    <a href="index.html">
+                        <img src="img/logoNavAF.svg">
+                    </a>
+                </div>
+                <div class="link-menu ǀ hidden md:block">
+                    <ul class="flex ǀ list-none">
+                        <li class="font-semibold ǀ mr-8">
+                            <a href="index.html" class="hover:text-redAkira-100">Inicio</a>
+                        </li>
+                        <li class="font-semibold">
+                            <a href="menu.html" class="active hover:text-redAkira-100">Menú</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user ǀ flex ǀ md:ml-auto">
+                    <div class="relative">
+                        <p id="opUser" class="dropUser ǀ flex items-center ǀ cursor-pointer ǀ hover:text-redAkira-100">
+                            <img src="img/icon-user.svg" class="md:mr-2">
+                            <span class="hidden md:block ǀ font-semibold ǀ mr-2">Usuario</span>
+                            <i class="fas fa-chevron-down hidden md:block"></i>
+                        </p>
+                        <div id="dropUser" class="dropDown ǀ hidden">
+                            <ul class="list-none">
+                                <li><a href="#" class="hover:text-redAkira-100">Direcciones</a></li>
+                                <li><a href="#" class="hover:text-redAkira-100">Formas de pago</a></li>
+                                <li><a href="#" class="hover:text-redAkira-100">Pedidos</a></li>
+                                <li><a href="#" class="hover:text-redAkira-100">Cambiar contraseña</a></li>
+                                <li class="last-op"><a href="#" class="hover:text-redAkira-100">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-cesta ǀ relative ǀ hidden md:block ǀ ml-5 ǀ cursor-pointer">
+                        <img src="img/icon-cesta.svg">
+                        <div class="cirlce-bg-item"><span>10</span></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="dropMobile" class="hidden">
+            <ul class="list-none">
+                <li><a href="index.html" class="hover:text-redAkira-100">Inicio</a></li>
+                <li><a href="menu.html" class="hover:text-redAkira-100">Menú</a></li>
+            </ul>
+        </div>
+        <!-- END NAVBAR -->
+
+        <!-- HEADER -->
+        <section id="menu-inicio" class="bg-white ǀ relative ǀ py-24">
+            <div class="container lg:max-w-7xl mx-auto px-0 md:px-5 xl:px-0">
+                <h1 class="text-3xl md:text-5xl font-bold text-center md:text-left ǀ w-max ǀ mx-auto md:mx-0"><p class="mb-1 md:mb-3">¡Hola</p><p>Robelci!</p></h1>
+                <p class="text-xl text-center md:text-left ǀ w-4/5 md:w-full ǀ mx-auto md:mx-0 ǀ mt-5">Elige la comida que más te guste de nuestro menú de abajo.</p>
+            </div>
+            <div class="img-single absolute top-10 ǀ w-full ǀ hidden md:block">
+                <img src="img/spacy1.png">
+                <img src="img/img-single.png">
+            </div>
+            <div class="bg-mobile-banner ǀ block md:hidden overflow-hidden">
+                <img src="img/spacy1.png">
+                <img src="img/spacy2.png">
+                <img src="img/spacy3.png">
+                <img src="img/spacy4.png">
+            </div>
+        </section>
+        <!-- END HEADER -->
+
+        <!-- CARDS -->
+        <section class="bg-white ǀ relative ǀ py-24">
+            <div class="container lg:max-w-7xl ǀ mx-auto px-0 md:px-5 xl:px-0 ǀ grid grid-cols-12 gap-10">
+                <!-- card 1 -->
+                <div class="card-menu ǀ col-span-12 md:col-span-5 ǀ grid grid-cols-6 grid-rows-2 ǀ rounded-2xl ǀ bg-blueAkira-300 h-96 md:h-64 ǀ mx-5 md:mx-0 ">
+                    <div class="rounded-t-2xl rounded-b-none md:rounded-l-2xl md:rounded-r-none ǀ overflow-hidden ǀ col-span-6 md:col-span-3 row-span-1 md:row-span-2">
+                        <img src="img/food/desayuno.jpg" alt="Desayunos" class="object-cover h-full w-full">
+                    </div>
+                    <div class="col-span-6 md:col-span-3 row-span-2 p-5">
+                        <p class="font-bold mb-2 md:mb-5 text-xl">Desayunos</p>
+                        <p class="mb-0 md:mb-2">Horarios de</p>
+                        <p>09:00 a 11:00 hrs.</p>
+                        <div class=" ǀ mt-5">
+                            <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-32 ǀ mx-auto md:mx-0 ǀ p-2">Elegir</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card 1 -->
+                <!-- card 2 -->
+                <div class="card-menu ǀ col-span-12 md:col-span-5 ǀ grid grid-cols-6 grid-rows-2 ǀ rounded-2xl ǀ bg-blueAkira-300 h-96 md:h-64 ǀ mx-5 md:mx-0 ">
+                    <div class="rounded-t-2xl rounded-b-none md:rounded-l-2xl md:rounded-r-none ǀ overflow-hidden ǀ col-span-6 md:col-span-3 row-span-1 md:row-span-2">
+                        <img src="img/food/spagueti.jpg" alt="Comidas" class="object-cover h-full w-full">
+                    </div>
+                    <div class="col-span-6 md:col-span-3 row-span-2 p-5">
+                        <p class="font-bold mb-2 md:mb-5 text-xl">Comidas</p>
+                        <p class="mb-0 md:mb-2">Horarios de</p>
+                        <p>13:00 a 15:00 hrs.</p>
+                        <div class=" ǀ mt-5">
+                            <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-32 ǀ mx-auto md:mx-0 ǀ p-2">Elegir</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card 2 -->
+
+                <!-- card 3 -->
+                <div class="card-menu ǀ col-span-12 md:col-span-5 ǀ grid grid-cols-6 grid-rows-2 ǀ rounded-2xl ǀ bg-blueAkira-300 h-96 md:h-64 ǀ mx-5 md:mx-0 ">
+                    <div class="rounded-t-2xl rounded-b-none md:rounded-l-2xl md:rounded-r-none ǀ overflow-hidden ǀ col-span-6 md:col-span-3 row-span-1 md:row-span-2">
+                        <img src="img/food/cena.jpg" alt="Cenas" class="object-cover h-full w-full">
+                    </div>
+                    <div class="col-span-6 md:col-span-3 row-span-2 p-5">
+                        <p class="font-bold mb-2 md:mb-5 text-xl">Cenas</p>
+                        <p class="mb-0 md:mb-2">Horarios de</p>
+                        <p>16:00 a 20:00 hrs.</p>
+                        <div class=" ǀ mt-5">
+                            <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-32 ǀ mx-auto md:mx-0 ǀ p-2">Elegir</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card 3 -->
+
+                <!-- card 4 -->
+                <div class="card-menu ǀ col-span-12 md:col-span-5 ǀ grid grid-cols-6 grid-rows-2 ǀ rounded-2xl ǀ bg-blueAkira-300 h-96 md:h-64 ǀ mx-5 md:mx-0 ">
+                    <div class="rounded-t-2xl rounded-b-none md:rounded-l-2xl md:rounded-r-none ǀ overflow-hidden ǀ col-span-6 md:col-span-3 row-span-1 md:row-span-2">
+                        <img src="img/food/postre.jpg" alt="Postres" class="object-cover h-full w-full">
+                    </div>
+                    <div class="col-span-6 md:col-span-3 row-span-2 p-5">
+                        <p class="font-bold mb-2 md:mb-5 text-xl">Postres</p>
+                        <p class="mb-0 md:mb-2">Horarios de</p>
+                        <p>09:00 a 20:00 hrs.</p>
+                        <div class=" ǀ mt-5">
+                            <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-32 ǀ mx-auto md:mx-0 ǀ p-2">Elegir</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card 4 -->
+            </div>
+        </section>
+        <!-- END CARDS -->
+
+        <!-- FOOTER -->
+        <footer class="bg-blackAkira-200 ǀ py-10">
+            <div class="container lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0 ǀ grid grid-cols-12">
+                <div class="col-span-12 md:col-span-4 ǀ flex justify-center md:justify-start">
+                    <img src="img/logoFooterAF.svg">
+                </div>
+                <div class="col-span-12 md:col-span-4 ǀ flex items-center justify-center md:justify-start ǀ my-10 md:my-0">
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg ǀ mr-5">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg ǀ mr-5">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="col-span-12 md:col-span-4 ǀ text-center md:text-left">
+                    <p class="text-white mb-5">Tel: 932 101 8772</p>
+                    <p class="text-white">Akira Food todos los derechos reservados 2021</p>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+    </main>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="headerModal ǀ relative ǀ bg-gray-100">
+            <div class="btn-cesta ǀ absolute ǀ top-5 right-5 ǀ cursor-pointer ǀ z-50">
+                <img src="img/icon-close.svg">
+            </div>
+            <img src="img/imgModal.png" class="relative ǀ mx-auto pt-5">
+        </div>
+        <div class="sidebar-content ǀ py-5 px-10">
+            <div class="col-span-6 ǀ text-center">
+                <p class="font-bold text-xl">Cesta de compras</p>
+            </div>
+            <!-- card 1 -->
+            <div class="card-food reboteIn ǀ grid grid-cols-6 grid-rows-2 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
+                <div class="rounded-2xl ǀ overflow-hidden ǀ col-span-2 row-span-1 md:row-span-2">
+                    <img src="img/food/spagueti.jpg" alt="spagueti" class="object-cover h-full w-full">
+                </div>
+                <div class="col-span-4 row-span-2">
+                    <p>Spaghetti Saute with tomatoes and basil</p>
+                    <p class="text-redAkira-100 font-semibold text-xl ǀ py-5">$ 60.00</p>
+                    <div class="flex items-center">
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
+                            <i class="fas fa-minus"></i>
+                        </a>
+                        <span>1</span>
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                    <div class=" ǀ mt-5">
+                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira-100 text-blackAkira-100 ǀ hover:bg-blackAkira-100 hover:text-white">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end card 1 -->
+            <!-- card 2 -->
+            <div class="card-food reboteIn ǀ grid grid-cols-6 grid-rows-2 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
+                <div class="rounded-2xl ǀ overflow-hidden ǀ col-span-2 row-span-1 md:row-span-2">
+                    <img src="img/food/cafe.jpg" alt="café" class="object-cover h-full w-full">
+                </div>
+                <div class="col-span-4 row-span-2">
+                    <p>Café</p>
+                    <p class="text-redAkira-100 font-semibold text-xl ǀ py-5">$ 15.00</p>
+                    <div class="flex items-center">
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
+                            <i class="fas fa-minus"></i>
+                        </a>
+                        <span>1</span>
+                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                    <div class=" ǀ mt-5">
+                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira-100 text-blackAkira-100 ǀ hover:bg-blackAkira-100 hover:text-white">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end card 2 -->
+            <div class="border-t border-grayAkira-200 ǀ py-5">
+                <p class="font-semibold ǀ mb-3">Dirección de entrega</p>
+                <p class="font-semibold">Robelci Manuel Guzmán</p>
+                <p>Calle Río Macuspana No. 124, Col. Tabasco, Xalapa, Veracruz</p>
+                <p>CP: 12345</p>
+                <a href="#" class="block ǀ w-max ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra dirección</a>
+            </div>
+            <div class="py-5">
+                <p class="font-semibold ǀ mb-3">Forma de pago</p>
+                <p class="font-semibold">Robelci Manuel Guzmán</p>
+                <p>xxxx - xxxx - xxxx-1234</p>
+                <p>14-01-21</p>
+                <a href="#" class="block ǀ w-max ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra tarjeta</a>
+            </div>
+        </div>
+        <div class="flex justify-center ǀ mb-10 px-10">
+            <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Hacer pedido</a>
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

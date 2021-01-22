@@ -33,6 +33,7 @@ module.exports = {
         blueAkira: {
           100: '#F0F0FA',
           200: '#1C6F9E',
+          300: '#F0F3F8',
         },
 
         greenAkira: '#81B057',

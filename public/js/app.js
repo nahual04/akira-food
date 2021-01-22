@@ -18,46 +18,6 @@ dropDownUser.addEventListener('click', () => {
 })
 // END DROPDOWN USER OPTIONS
 
-//MODAL
-var openmodal = document.querySelectorAll('.modal-open')
-for (var i = 0; i < openmodal.length; i++) {
-    openmodal[i].addEventListener('click', function(event){
-    event.preventDefault()
-    toggleModal()
-    })
-}
-
-const overlay = document.querySelector('.modal-overlay')
-overlay.addEventListener('click', toggleModal)
-
-var closemodal = document.querySelectorAll('.modal-close')
-for (var i = 0; i < closemodal.length; i++) {
-    closemodal[i].addEventListener('click', toggleModal)
-}
-
-document.onkeydown = function(evt) {
-    evt = evt || window.event
-    var isEscape = false
-    if ("key" in evt) {
-    isEscape = (evt.key === "Escape" || evt.key === "Esc")
-    } else {
-    isEscape = (evt.keyCode === 27)
-    }
-    if (isEscape && document.body.classList.contains('modal-active')) {
-    toggleModal()
-    }
-};
-
-
-function toggleModal () {
-    const body = document.querySelector('body')
-    const modal = document.querySelector('.modal')
-    modal.classList.toggle('opacity-0')
-    modal.classList.toggle('pointer-events-none')
-    body.classList.toggle('modal-active')
-}
-//END MODAL
-
 // HIDE NAVBAR ON SCROLL DOWN
 // var didScroll;
 // var lastScrollTop = 0;
@@ -175,6 +135,19 @@ var swiper = new Swiper('.swiper-container', {
 });
 //SWIPER
 
+//TABS
+const contentTab = document.querySelector('.content-tab');
+const formTab = document.querySelector('.content-tab #register a');
+const formTab2 = document.querySelector('.content-tab #login a');
 
+formTab.addEventListener('click', () => {
+    contentTab.classList.toggle('move')
+})
+
+formTab2.addEventListener('click', () => {
+  contentTab.classList.toggle('move')
+})
+
+//END TABS
 
 
