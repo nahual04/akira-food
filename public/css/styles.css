@@ -3,6 +3,7 @@ html, body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #222;
+    position: relative;
 }
 
 html {
@@ -493,14 +494,57 @@ main {
 /*END SIDEBAR*/
 
 /*MODAL*/
-.modal {
+/* .modal {
     transition: opacity 0.25s ease;
     z-index: 50;
-}
+} */
 
-body.modal-active {
+/* body.modal-active {
     overflow-x: hidden;
     overflow-y: visible !important;
+} */
+
+/* .modal-container {
+    max-width: 540px;
+    transform: scale(0);
+    -webkit-transition: transform .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out;
+    -ms-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+.modal-content {
+    width: 540px;
+    height: 100%;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+body.modal-active .modal-container {
+    transform: scale(1);
+} */
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; */
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+    outline: 0;
+    box-sizing: border-box;
 }
 
 .modal-container {
@@ -522,6 +566,15 @@ body.modal-active {
 
 body.modal-active .modal-container {
     transform: scale(1);
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+body.modal-active {
+    overflow: hidden;
 }
 
 
@@ -749,6 +802,31 @@ body.modal-active .modal-container {
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
 }
 /* END MENU */
+
+
+/*BREAKFAST*/
+.bg-food {
+    background-image: url(../img/bg-food.svg);
+    background-repeat: repeat;
+}
+/*END BREAKFAST*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -120,7 +120,7 @@
             <div class="container lg:max-w-7xl mx-auto px-0 md:px-5 xl:px-0">
                 <h1 class="text-4xl md:text-5xl font-bold text-center md:text-left ǀ w-max ǀ mx-auto md:mx-0 mt-5 md:mt-0"><p class="mb-1 md:mb-3">NO TE QUEDES</p><p>CON HAMBRE</p></h1>
                 <p class="text-xl md:text-3xl w-max ǀ mx-auto md:mx-0 ǀ mt-5">Solo regístrate y pide tu comida.</p>
-                <a href="#" class="flex items-center justify-center ǀ modal-open ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-4/5 sm:w-80 ǀ mx-auto md:mx-0 ǀ p-4 my-8">Registrarme</a>
+                <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-4/5 sm:w-80 ǀ mx-auto md:mx-0 ǀ p-4 my-8 open-modal" data-modal="modal-register">Registrarme</a>
                 <p class="md:text-2xl font-bold ǀ w-max ǀ mx-auto md:mx-0 mb-3">Elige un platillo:</p>
 
                 <!-- carousel -->
@@ -200,6 +200,128 @@
         <!-- END BTN FLOAT CESTA -->
 
         <!--MODAL REGISTRO-->
+        <div class="modal" id="modal-register">
+            <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                <!-- Add margin if you want to see some of the overlay behind the modal-->
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="headerModal ǀ relative ǀ bg-gray-100 ǀ mb-5">
+                        <div class="absolute  ǀ top-5 right-5 ǀ close cursor-pointer ǀ z-50">
+                            <img src="img/icon-close.svg">
+                        </div>
+                        <img src="img/imgModal.png" class="relative ǀ mx-auto pt-5">
+                    </div>
+                    <!-- body -->
+                    <div class="content-tab">
+                        <div id="register" class="modal-body px-10 form-tab">
+                            <div class="flex justify-between tab">
+                                <div><p class="text-2xl font-bold">Registro</p></div>
+                                <a class="flex items-center ǀ cursor-pointer ǀ text-blueAkira-200 ǀ tab-register">
+                                    <p class="block ǀ w-max ǀ hover:underline ǀ mr-3">Ya tengo una cuenta</p>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            
+                            <form action="" class="py-5" style="">
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Nombre completo</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-user ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="text" placeholder="Nombre completo" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Teléfono</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-phone-alt ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="number" placeholder="Teléfono" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Correo</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-envelope ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="email" placeholder="Correo" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Contraseña</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="password" placeholder="Contraseña" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Confirmar contraseña</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="password" placeholder="Confirmar contraseña" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Código postal</label>
+                                    <div class="relative ǀ h-12 ǀ grid grid-cols-10">
+                                        <i class="fas fa-map-marker-alt ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="number" placeholder="Código postal" class="border border-blackAkira-100 rounded-l-lg ǀ h-full pl-12 ǀ col-span-7">
+                                        <a href="#" class="bg-blackAkira-100 text-white font-bold ǀ h-full rounded-r-lg ǀ col-span-3 ǀ flex items-center justify-center">Validar</a>
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Tipo de vivienda</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-home ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="text" placeholder="Tipo de vivienda" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="flex justify-center ǀ my-5">
+                                    <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Registrarme</a>
+                                </div>
+                            </form>                        
+                        </div>       
+    
+                        <div id="login" class="modal-body px-10 form-tab2">
+                            <div class="flex justify-between tab">
+                                <div><p class="text-2xl font-bold">Log-in</p></div>
+                                <a class="flex items-center ǀ cursor-pointer ǀ text-blueAkira-200 ǀ tab-login">
+                                    <p class="block ǀ w-max ǀ hover:underline ǀ mr-3">No tengo una cuenta</p>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <form action="" class="py-5">
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Correo</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-envelope ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="email" placeholder="Correo" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+    
+                                <div class="mb-4">
+                                    <label for="" class="mb-2">Contraseña</label>
+                                    <div class="relative ǀ h-12">
+                                        <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                        <input type="password" placeholder="Contraseña" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-center ǀ my-5">
+                                    <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Registrarme</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
             <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
             
@@ -505,45 +627,37 @@
     <script src="js/app.js"></script>
 
     <script>
-        //MODAL
-        var openmodal = document.querySelectorAll('.modal-open')
-        for (var i = 0; i < openmodal.length; i++) {
-            openmodal[i].addEventListener('click', function(event){
-            event.preventDefault()
-            toggleModal()
-            })
+        //MODALS
+        let openModal = document.querySelectorAll('.open-modal');
+		let modals = document.querySelectorAll('.modal');
+
+		function showModal(id) {
+		  let m = document.getElementById(id);
+          m.classList.add('visible');
+		}
+
+		function hideModals() {
+		  modals.forEach(m => {
+            m.classList.remove('visible');
+          });
+
+          const body = document.querySelector('body');
+          body.classList.toggle('modal-active');
         }
 
-        const overlay = document.querySelector('.modal-overlay')
-        overlay.addEventListener('click', toggleModal)
 
-        var closemodal = document.querySelectorAll('.modal-close')
-        for (var i = 0; i < closemodal.length; i++) {
-            closemodal[i].addEventListener('click', toggleModal)
-        }
+		openModal.forEach(b => {
+		  b.addEventListener('click', event => {
+		    hideModals();
+		    showModal(b.dataset.modal);
+		  });
+		});
 
-        document.onkeydown = function(evt) {
-            evt = evt || window.event
-            var isEscape = false
-            if ("key" in evt) {
-            isEscape = (evt.key === "Escape" || evt.key === "Esc")
-            } else {
-            isEscape = (evt.keyCode === 27)
-            }
-            if (isEscape && document.body.classList.contains('modal-active')) {
-            toggleModal()
-            }
-        };
-
-
-        function toggleModal () {
-            const body = document.querySelector('body')
-            const modal = document.querySelector('.modal')
-            modal.classList.toggle('opacity-0')
-            modal.classList.toggle('pointer-events-none')
-            body.classList.toggle('modal-active')
-        }
-        //END MODAL
+		modals.forEach(m => {
+		  let x = m.querySelector('.close');
+          x.addEventListener('click', hideModals);
+        });
+        //END MODALS
     </script>
 </body>
 </html>

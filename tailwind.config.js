@@ -18,6 +18,7 @@ module.exports = {
         grayAkira: {
           100: '#F2F2F2',
           200: '#D9D9D9',
+          300: "#F8F8F8",
         },
 
         redAkira: {
