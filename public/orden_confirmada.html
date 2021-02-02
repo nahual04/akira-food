@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nos dedicamos al envío de comida">
+        <meta name="keywords" content="Desayunos, Comidas, Cenas, Postres">
+        <meta name="robots" content="index,follow">
+        
+        <title>Akira Food ǀ Orden Confirmada</title>
+    
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/113a378e2b.js" crossorigin="anonymous"></script>
+    
+        <!-- css -->
+        <link rel="stylesheet" href="css/tailwind.css">    
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+
+    <main>
+        <!-- NAVBAR -->
+        <nav class="navAkiraFood navbar fixed-top ǀ bg-transparent ǀ fixed z-30 w-full ǀ nav-down">
+            <div class="flex justify-between items-center ǀ container ǀ lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0">
+                <div class="md:hidden">
+                    <label class="toggle">
+                        <input type="checkbox" id="dropMenu">
+                        <div>
+                            <div>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <svg>
+                                <use xlink:href="#path">
+                            </svg>
+                            <svg>
+                                <use xlink:href="#path">
+                            </svg>
+                        </div>
+                    </label>
+                            
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+                            <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+                        </symbol>
+                    </svg>
+                </div>
+
+
+                <div class="content-logo-nav ǀ md:mr-44 lg:mr-64">
+                    <a href="index.html">
+                        <img src="img/logoNavAF.svg">
+                    </a>
+                </div>
+                <div class="link-menu ǀ hidden md:block">
+                    <ul class="flex ǀ list-none">
+                        <li class="font-semibold ǀ mr-8">
+                            <a href="index.html" class="hover:text-redAkira-100">Inicio</a>
+                        </li>
+                        <li class="font-semibold">
+                            <a href="menu.html" class="active hover:text-redAkira-100">Menú</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user ǀ flex ǀ md:ml-auto">
+                    <div class="relative">
+                        <p id="opUser" class="dropUser ǀ flex items-center ǀ cursor-pointer ǀ hover:text-redAkira-100">
+                            <img src="img/icon-user.svg" class="md:mr-2">
+                            <span class="hidden md:block ǀ font-semibold ǀ mr-2">Usuario</span>
+                            <i class="fas fa-chevron-down hidden md:block"></i>
+                        </p>
+                        <div id="dropUser" class="dropDown ǀ hidden">
+                            <ul class="list-none">
+                                <li class="md:mb-1"><a href="pedidos.html" class="hover:text-redAkira-100">Pedidos</a></li>
+                                <li class="md:mb-1"><a href="direcciones.html" class="hover:text-redAkira-100">Direcciones</a></li>
+                                <li class="md:mb-1"><a href="formas_de_pago.html" class="hover:text-redAkira-100">Formas de pago</a></li>
+                                <li class="md:mb-1"><a href="cambiar_contrasena.html" class="hover:text-redAkira-100">Cambiar contraseña</a></li>
+                                <li class="last-op"><a href="#" class="hover:text-redAkira-100">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-cesta ǀ relative ǀ hidden md:block ǀ ml-5 ǀ cursor-pointer">
+                        <img src="img/icon-cesta.svg">
+                        <div class="cirlce-bg-item"><span>10</span></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="dropMobile" class="hidden">
+            <ul class="list-none">
+                <li><a href="index.html" class="hover:text-redAkira-100">Inicio</a></li>
+                <li><a href="menu.html" class="hover:text-redAkira-100">Menú</a></li>
+            </ul>
+        </div>
+        <!-- END NAVBAR -->
+
+        <!-- BTN FLOAT CESTA -->
+        <div class="bfa btn-cesta ǀ flex items-center justify-center ǀ block md:hidden ǀ cursor-pointer ǀ w-16 h-16 rounded-full bg-yellowAkira-200">
+            <div class="relative">
+                <img src="img/icon-cesta.svg">
+                <div class="cirlce-bg-item"><span>10</span></div>
+            </div>
+        </div>
+        <!-- END BTN FLOAT CESTA -->
+
+        <!-- HEADER -->
+        <section id="menu-inicio" class="bg-white ǀ relative ǀ py-24">
+            <div class="container lg:max-w-7xl mx-auto px-0 md:px-5 xl:px-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-center md:text-left ǀ w-max ǀ mx-auto md:mx-0 mt-5 md:mt-0"><p class="mb-1 md:mb-3">¡Excelente!</h1>
+                <p class="text-xl text-center md:text-left ǀ w-4/5 md:w-full md:max-w-md xl:max-w-full ǀ mx-auto md:mx-0 ǀ mt-5">Se ha realizado tu orden, ahora solo resta esperar a que llegue y a disfrutar.</p>
+            </div>
+            <div class="img-single absolute top-10 ǀ w-full ǀ hidden md:block">
+                <img src="img/spacy1.png">
+                <img src="img/img-single.png">
+            </div>
+            <div class="bg-mobile-banner ǀ block md:hidden overflow-hidden">
+                <img src="img/spacy1.png">
+                <img src="img/spacy2.png hidden">
+                <img src="img/spacy3.png">
+                <img src="img/spacy4.png hidden">
+            </div>
+        </section>
+        <!-- END HEADER -->
+
+       <!-- ORDER -->
+        <section class="bg-white ǀ relative ǀ py-24">
+            <div class="container lg:max-w-7xl mx-auto px-5 md:px-5 xl:px-0">
+                <div class="book ǀ relative ǀ bg-blueAkira-300 ǀ rounded-b-2xl md:rounded-b-none md:rounded-r-2xl ǀ p-5 md:p-10 ǀ grid grid-cols-12 gap-y-1 md:gap-x-10">
+
+                    <div class="col-span-12 md:col-span-4 ǀ flex items-center justify-center">
+                        <img src="img/cook2.svg" alt="cocinando tu pedido">
+                    </div>
+
+                    <div class="grid grid-cols-8 grid-rows-2 col-span-12 md:col-span-8 gap-y-5 md:gap-x-10 ǀ mt-5 md:mt-0">
+                        <div class="col-span-12 md:col-span-4">
+                            <p class="font-bold mb-5">Desayuno</p>
+                            <p>Hamburguesas con papitas.</p>
+                            <p class="mb-2">(2 platillos)</p>
+                            <p>Café</p>
+                            <p>(1 bebida)</p>
+                        </div>
+                        <div class="col-span-12 md:col-span-4">
+                            <p class="font-bold mb-5">Dirección de entrega</p>
+                            <p class="font-bold">Robelci Manuel Guzmán</p>
+                            <p>Calle Río Macuspana No. 124</p>
+                            <p>Col. Tabasco</p>
+                            <p>Xalapa, Veracruz</p>
+                            <p>CP: 12345</p>
+                        </div>
+                        <div class="col-span-12 md:col-span-4">
+                            <p class="font-bold mb-5">Precio</p>
+                            <p class="font-bold text-3xl text-redAkira-100">$75.00</p>
+                        </div>
+                        <div class="col-span-12 md:col-span-4">
+                            <p class="font-bold mb-5">Fecha de entrega</p>
+                            <p>Jueves 14 de enero de 2021</p>
+                        </div>
+                        
+                        <div class="md:col-start-5 col-span-12 md:col-span-4">
+                            <a href="index.html" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:max-w-xs ǀ p-4">Ir al inicio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- END ORDER -->
+
+        <!-- FOOTER -->
+        <footer class="bg-blackAkira-200 ǀ py-10">
+            <div class="container lg:max-w-7xl mx-auto px-5 sm:px-0 md:px-5 xl:px-0 ǀ grid grid-cols-12">
+                <div class="col-span-12 md:col-span-4 ǀ flex justify-center md:justify-start">
+                    <img src="img/logoFooterAF.svg">
+                </div>
+                <div class="col-span-12 md:col-span-4 ǀ flex items-center justify-center md:justify-start ǀ my-10 md:my-0">
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg ǀ mr-5">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg ǀ mr-5">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 ǀ rounded-full ǀ flex items-center justify-center ǀ bg-redAkira-100 text-white text-lg">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="col-span-12 md:col-span-4 ǀ text-center md:text-left">
+                    <p class="text-white mb-5">Tel: 55 12 34 56 78</p>
+                    <p class="text-white">Akira Food todos los derechos reservados 2021</p>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+    </main>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="headerModal ǀ relative ǀ bg-gray-100">
+            <div class="btn-cesta ǀ absolute ǀ top-5 right-5 ǀ cursor-pointer ǀ z-50">
+                <img src="img/icon-close.svg">
+            </div>
+            <img src="img/imgModal.png" class="relative ǀ mx-auto pt-5">
+        </div>
+        <div class="sidebar-content ǀ py-5 px-10">
+            <div class="text-center my-14">
+                <img src="img/cook1.svg" alt="sin platillos" class="inline">
+                <p class="text-lg mt-5">Tu cesta está vacía.</p>
+            </div>        
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
