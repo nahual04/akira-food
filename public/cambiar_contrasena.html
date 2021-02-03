@@ -7,7 +7,7 @@
         <meta name="keywords" content="Desayunos, Comidas, Cenas, Postres">
         <meta name="robots" content="index,follow">
         
-        <title>Akira Food ǀ Cenas</title>
+        <title>Akira Food ǀ Cambiar contraseña</title>
     
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -126,8 +126,7 @@
         <!-- HEADER -->
         <section id="menu-inicio" class="bg-white ǀ relative ǀ py-24">
             <div class="container lg:max-w-7xl mx-auto px-0 md:px-5 xl:px-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-center md:text-left ǀ w-max ǀ mx-auto md:mx-0 mt-5 md:mt-0"><p class="mb-1 md:mb-3">Cenas</p></h1>
-                <p class="text-xl text-center md:text-left ǀ w-4/5 md:w-full ǀ mx-auto md:mx-0 ǀ mt-5">Horarios de entrega de 16:00 a 20:00 hrs.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-center md:text-left ǀ w-max ǀ mx-auto md:mx-0 mt-5 md:mt-0"><p class="mb-1 md:mb-3">Cambiar</p><p>contraseña</p></h1>
             </div>
             <div class="img-single absolute top-10 ǀ w-full ǀ hidden md:block">
                 <img src="img/spacy1.png">
@@ -142,16 +141,54 @@
         </section>
         <!-- END HEADER -->
 
-        <!-- IMG WITHOUT DISH -->
+       <!-- CHANGE PASSWORD -->
         <section class="bg-white ǀ relative ǀ py-24">
-            <div class="container lg:max-w-7xl mx-auto px-0 md:px-5 xl:px-0 ǀ ">
-                <div class="text-center">
-                    <img src="img/cook1.svg" alt="sin platillos" class="inline">
-                    <p class="text-lg mt-5">Disculpa, aún no tenemos platillos.</p>
-                </div>
+            <div class="container lg:max-w-7xl mx-auto px-5 md:px-5 xl:px-0">
+                <p class="mb-5">Puedes crear una nueva contraseña con las siguientes sugerencias:</p>
+                <ul class="list-pass mb-10">
+                    <li>Por lo menos una mayúscula</li>
+                    <li>Por lo menos un caracter especial</li>
+                    <li>Por lo menos un número</li>
+                    <li>Puedes usar minúsculas</li>
+                    <li>Debe contener mínimo 8 caracteres</li>
+                </ul>
+
+                <form action="" class="grid grid-cols-12">
+                    <div class="col-span-12 md:col-span-4">
+                        <div class="mb-4">
+                            <label for="" class="mb-2">Contraseña vieja</label>
+                            <div class="relative ǀ h-12">
+                                <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                <input type="password" placeholder="Contraseña vieja" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="mb-2">Contraseña nueva</label>
+                            <div class="relative ǀ h-12">
+                                <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                <input type="password" placeholder="Contraseña nueva" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="mb-2">Confirmar contraseña nueva</label>
+                            <div class="relative ǀ h-12">
+                                <i class="fas fa-lock ǀ absolute left-5 top-1/2 transform -translate-y-1/2"></i>
+                                <input type="password" placeholder="Confirmar contraseña nueva" class="border border-blackAkira-100 rounded-lg ǀ h-full pl-12 w-full">
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <a href="#" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full ǀ p-4">Aceptar</a>
+                        </div>
+                    </div>
+                </form>
+
+                <p class="font-bold text-lg ǀ my-10">¡Listo!, ya tienes una nueva contraseña</p>
             </div>
         </section>
-        <!-- END IMG WITHOUT DISH -->
+       <!-- END CHANGE PASSWORD -->
 
         <!-- FOOTER -->
         <footer class="bg-blackAkira-200 ǀ py-10">
@@ -178,6 +215,7 @@
         </footer>
         <!-- END FOOTER -->
     </main>
+
     <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="headerModal ǀ relative ǀ bg-gray-100">
@@ -187,75 +225,10 @@
             <img src="img/imgModal.png" class="relative ǀ mx-auto pt-5">
         </div>
         <div class="sidebar-content ǀ py-5 px-10">
-            <div class="col-span-6 ǀ text-center">
-                <p class="font-bold text-xl">Cesta de compras</p>
-            </div>
-            <!-- card 1 -->
-            <div class="card-food reboteIn ǀ grid grid-cols-6 grid-rows-2 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
-                <div class="rounded-2xl ǀ overflow-hidden ǀ col-span-2 row-span-1 md:row-span-2">
-                    <img src="img/food/spagueti.jpg" alt="spagueti" class="object-cover h-full w-full">
-                </div>
-                <div class="col-span-4 row-span-2">
-                    <p>Spaghetti Saute with tomatoes and basil</p>
-                    <p class="text-redAkira-100 font-semibold text-xl ǀ py-5">$ 60.00</p>
-                    <div class="flex items-center">
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
-                            <i class="fas fa-minus"></i>
-                        </a>
-                        <span>1</span>
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                    <div class=" ǀ mt-5">
-                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira-100 text-blackAkira-100 ǀ hover:bg-blackAkira-100 hover:text-white">Eliminar</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end card 1 -->
-            <!-- card 2 -->
-            <div class="card-food reboteIn ǀ grid grid-cols-6 grid-rows-2 gap-4 ǀ py-5 ǀ border-b border-grayAkira-200">
-                <div class="rounded-2xl ǀ overflow-hidden ǀ col-span-2 row-span-1 md:row-span-2">
-                    <img src="img/food/cafe.jpg" alt="café" class="object-cover h-full w-full">
-                </div>
-                <div class="col-span-4 row-span-2">
-                    <p>Café</p>
-                    <p class="text-redAkira-100 font-semibold text-xl ǀ py-5">$ 15.00</p>
-                    <div class="flex items-center">
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ mr-5">
-                            <i class="fas fa-minus"></i>
-                        </a>
-                        <span>1</span>
-                        <a class="btn-card-circle ǀ w-6 h-6 ǀ rounded-full ǀ cursor-pointer ǀ bg-blackAkira-100 ǀ text-sm text-white ǀ flex items-center justify-center ǀ ml-5">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                    <div class=" ǀ mt-5">
-                        <a href="#" class="block ǀ w-32 ǀ flex items-center justify-center ǀ rounded-lg border border-blackAkira-100 text-blackAkira-100 ǀ hover:bg-blackAkira-100 hover:text-white">Eliminar</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end card 2 -->
-            <div class="py-10 text-center">
-                <p class="font-bold text-3xl text-redAkira-100"><span class="text-base font-normal">Total</span> $75.00</p>
-            </div>
-            <div class="border-t border-grayAkira-200 ǀ py-5">
-                <p class="font-semibold ǀ mb-3">Dirección de entrega</p>
-                <p class="font-semibold">Robelci Manuel Guzmán</p>
-                <p>Calle Río Macuspana No. 124, Col. Tabasco, Xalapa, Veracruz</p>
-                <p>CP: 12345</p>
-                <a href="direcciones.html" class="block ǀ w-max ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra dirección</a>
-            </div>
-            <div class="py-5">
-                <p class="font-semibold ǀ mb-3">Forma de pago</p>
-                <p class="font-semibold">Robelci Manuel Guzmán</p>
-                <p>xxxx - xxxx - xxxx-1234</p>
-                <p>14-01-21</p>
-                <a href="formas_de_pago.html" class="block ǀ w-max ǀ text-blueAkira-200 hover:underline ǀ mt-3">Elegir otra tarjeta</a>
-            </div>
-        </div>
-        <div class="flex justify-center ǀ mb-10 px-10">
-            <a href="orden_confirmada.html" class="flex items-center justify-center ǀ bg-redAkira-100 hover:bg-redAkira-200 ǀ rounded-full ǀ text-white font-bold ǀ w-full md:w-80 ǀ p-4">Hacer pedido</a>
+            <div class="text-center my-14">
+                <img src="img/cook1.svg" alt="sin platillos" class="inline">
+                <p class="text-lg mt-5">Tu cesta está vacía.</p>
+            </div>        
         </div>
     </div>
     <!-- END SIDEBAR -->

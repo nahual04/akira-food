@@ -823,7 +823,38 @@ body.modal-active {
 
 /*END ORDER CONFIRMED*/
 
+/*ADRESS*/
+.card-dir {
+    min-height: 245px;
+}
+/*END ADRESS*/
 
+/*PAYMENT METHODS*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: none;
+}
+/*END PAYMENT METHODS*/
+
+/*CHANGE PASSWORD*/
+.list-pass {
+    padding-left: 20px;
+}
+
+.list-pass li {
+    position: relative;
+}
+
+.list-pass li:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 100%;
+}
+/*END CHANCE PASSWORD*/
 
 
 
